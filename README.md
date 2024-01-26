@@ -8,7 +8,7 @@
 3. Update odoo.sh with your desired paths
 4. Make odoo.sh script file executable
 5. Access permission for .pgpass to 640 
-
+6. Test
 ## Clone The Repository
 
 Firstly, you can clone the repository or directly download the repository folder.
@@ -49,3 +49,12 @@ And, grant the .pgpass file with 640.
 ```shell
 chmod 640 .pgpass
 ```
+
+## Test
+
+You can test the shell script with execute command
+
+```shell
+./odoo.sh
+```
+After the execution, check the backup directory, you configured at the odoo.sh .
