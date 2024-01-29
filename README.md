@@ -9,6 +9,7 @@
 4. Make odoo.sh script file executable
 5. Access permission for .pgpass to 640 
 6. Test
+7. Writing Cron Job
 ## Clone The Repository
 
 Firstly, you can clone the repository or directly download the repository folder.
@@ -58,3 +59,17 @@ You can test the shell script with execute command
 ./odoo.sh
 ```
 After the execution, check the backup directory, you configured at the odoo.sh .
+
+## Writing Cron Jon
+Firstly, you need to change to sudo user. And write cron job.
+
+```shell
+sudo su
+crontab -e
+```
+
+20 means 20 minutes, 9 means 9 hours and /home/has/Downloads/project/bin/odoo.sh is the sh file path.
+
+```shell
+20 9 * * * /home/has/Downloads/project/bin/odoo.sh > /tmp/cronjob.log 2>&1
+```
