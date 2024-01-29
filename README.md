@@ -60,7 +60,7 @@ You can test the shell script with execute command
 ```
 After the execution, check the backup directory, you configured at the odoo.sh .
 
-## 7. Writing Cron Jon
+## 7. Write Cron Jon
 Firstly, you need to change to sudo user. And write cron job.
 
 ```shell
@@ -68,7 +68,7 @@ sudo su
 crontab -e
 ```
 
-20 means 20 minutes, 9 means 9 hours and /home/has/Downloads/project/bin/odoo.sh is the sh file path.
+20 means 20 minutes, 9 means 9 hours and /home/has/Downloads/project/bin/odoo.sh is the 'sh file path' .
 
 ```shell
 20 9 * * * /home/has/Downloads/project/bin/odoo.sh > /tmp/cronjob.log 2>&1
