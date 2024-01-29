@@ -9,19 +9,19 @@
 4. Make odoo.sh script file executable
 5. Access permission for .pgpass to 640 
 6. Test
-7. Writing Cron Job
-## Clone The Repository
+7. Write Cron Job
+## 1. Clone The Repository
 
 Firstly, you can clone the repository or directly download the repository folder.
 
-## Update the .pgpass with your credentials
+## 2. Update the .pgpass with your credentials
 
 Open the folders with your Code Editor, IDE, text editor, or terminal. Update the .pgpass file with your credentials.
 
 ```shell
 localhost:5432:db_mttech:mttech:password
 ```
-## Update odoo.sh with your desired paths
+## 3. Update odoo.sh with your desired paths
 
 Update the odoo.sh file with your desired paths.
 
@@ -36,14 +36,14 @@ BASE_DIR="/home/has/Documents/odoo-database-backup"
 HOME="/home/has/Downloads/odoo-auto-backup"
 ```
 
-## Make odoo.sh script file executable
+## 4. Make odoo.sh script file executable
 
 Grant executable permission to the odoo.sh file.
 
 ```shell
 chmod +x odoo.sh
 ```
-## Access permission for .pgpass to 640 
+## 5. Access permission for .pgpass to 640 
 
 And, grant the .pgpass file with 640.
 
@@ -51,7 +51,7 @@ And, grant the .pgpass file with 640.
 chmod 640 .pgpass
 ```
 
-## Test
+## 6. Test
 
 You can test the shell script with execute command
 
@@ -60,7 +60,7 @@ You can test the shell script with execute command
 ```
 After the execution, check the backup directory, you configured at the odoo.sh .
 
-## Writing Cron Jon
+## 7. Writing Cron Jon
 Firstly, you need to change to sudo user. And write cron job.
 
 ```shell
