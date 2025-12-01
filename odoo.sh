@@ -17,7 +17,8 @@ mkdir -p $BACKUP_DIR
 export PGPASSFILE="$HOME/.pgpass"
 
 # Backup the Odoo database
-pg_dump -h localhost -U $ODOO_USER -d $ODOO_DATABASE -F c -b -v -f $BACKUP_DIR/$ODOO_DATABASE-$DATE.dump
+docker exec postgres_16_container pg_dump -h localhost -U $ODOO_USER -d $ODOO_DATABASE -F c \
+ > $BACKUP_DIR/$ODOO_DATABASE-$DATE.dump
 
 # Check if the backup was successful
 if [ $? -eq 0 ]; then
